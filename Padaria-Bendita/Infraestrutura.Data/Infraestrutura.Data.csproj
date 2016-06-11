@@ -65,30 +65,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contexto\TesteContexto.cs" />
+    <Compile Include="EntidadeConfiguracao\CargoConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\CategoriaConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\ClienteConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\EmbalagemConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\FuncionarioConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\LoteProdutosConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\PedidoConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\Pedidos_ProdutosConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\PessoaConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\PrioridadeConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\ProdutoConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\PromocaoConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\TipoProdutoConfig.cs" />
+    <Compile Include="EntidadeConfiguracao\TipoProduto_ProdutoConfig.cs" />
+    <Compile Include="Entidades\Cargo.cs" />
+    <Compile Include="Entidades\Categoria.cs" />
     <Compile Include="Entidades\Cliente.cs" />
-    <Compile Include="Entidades\Cores.cs" />
     <Compile Include="Entidades\Embalagem.cs" />
-    <Compile Include="Entidades\Entrega.cs" />
-    <Compile Include="Entidades\Estoque.cs" />
-    <Compile Include="Entidades\FormaEntrega.cs" />
+    <Compile Include="Entidades\Funcionario.cs" />
+    <Compile Include="Entidades\LoteProduto.cs" />
     <Compile Include="Entidades\Pedido.cs" />
+    <Compile Include="Entidades\Pedidos_Produtos.cs" />
+    <Compile Include="Entidades\Pessoa.cs" />
+    <Compile Include="Entidades\Prioridade.cs" />
     <Compile Include="Entidades\Produto.cs" />
-    <Compile Include="Entidades\StatusEntrega.cs" />
-    <Compile Include="Entidades\StatusProduto.cs" />
-    <Compile Include="Entidades\StatusValidade.cs" />
-    <Compile Include="Entidades\TipoEmbalagem.cs" />
+    <Compile Include="Entidades\Promocao.cs" />
     <Compile Include="Entidades\TipoProduto.cs" />
+    <Compile Include="Entidades\TipoProduto_Produto.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contexto\" />
-    <Folder Include="EntidadeConfiguracao\" />
-    <Folder Include="Migrations\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

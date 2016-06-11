@@ -1,17 +1,22 @@
-﻿using System;
+﻿
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infraestrutura.Data.Entidades
 {
-    class Cliente
+    public class Cliente
     {
-        public int CdCliente { get; set; }
-        public string NmCliente { get; set; }
-        public string CPF { get; set; }
-        public string CEP { get; set; }
-        public string Email { get; set; }
+        public int CdCliente { get; set; }//PK
+
+        public string StCliente { get; set; }
+
+        public int CdPessoa { get; set; }//FK
+        public int CdPrioridade { get; set; }//FK
+
+        public virtual ICollection<Pessoa> Pessoa { get; set; }
+        public virtual ICollection<Prioridade> Prioridade { get; set; }
+
+        public virtual ICollection<Pedido> Pedido { get; set; }
+
     }
 }

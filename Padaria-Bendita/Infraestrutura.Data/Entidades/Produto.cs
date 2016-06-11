@@ -1,23 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infraestrutura.Data.Entidades
 {
-    class Produto
+    public class Produto
     {
-        public int CdProduto{ get; set; }
+        public int CdProduto{ get; set; } //PK
+
         public string NmProduto { get; set; }
         public string DscProduto { get; set; }
-        public decimal VlUnitario { get; set; }
-        public DateTime DtProdução { get; set; }
+        public decimal VlUnit { get; set; }
+        public int UnitEmEstoque { get; set; }
+        public char NvlEstoque { get; set; }
+        public char Descontinuado { get; set; }
+        public int QtdMax { get; set; }
+        public int QtdMin { get; set; }
 
-        //FK
-       // public IEnumerable<TipoProduto> _TipoProduto { get; set; }
-        public int CdStProduto { get; set; }
-        public int CdStValidade { get; set; }
+        public int CdCategoria { get; set; } //FK
+
+        public virtual ICollection<Categoria> Categoria { get; set; }
+
+        public virtual ICollection<Pedidos_Produtos> Pedidos_Produtos { get; set; }
+        public virtual ICollection<TipoProduto_Produto> TipoProduto_Produto { get; set; }
+        public virtual ICollection<LoteProduto> LoteProduto { get; set; }
 
 
     }

@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Infraestrutura.Data.Entidades
 {
-    class Embalagem
+    public class Embalagem
     {
-        public int CdEmbalagem { get; set; }
+        public int CdEmbalagem { get; set; }//PK
+
         public string NmEmbalagem { get; set; }
         public string DscEmbalagem { get; set; }
-        public string DscUnidade { get; set; }
+        public string UnitEmbalagem { get; set; }
+
+        public virtual ICollection<TipoProduto> TipoProduto { get; set; }
+
     }
 }
